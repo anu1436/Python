@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Riddle</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("riddleForm");
+            const message = document.getElementById("message");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+
+                fetch('/check_answer', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'correct') {
+                        window.location.href = data.next_url;
+                    } else {
+                        message.textContent = "Wrong answer. Try again.";
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>{{ riddle }}</h1>
+    <form id="riddleForm">
+        <input type="text" name="answer">
+        <input type="hidden" name="riddle_key" value="{{ riddle_key }}">
+        <input type="submit" value="Submit">
+        <span id="message" style="color: red;"></span>
+    </form>
+</body>
+</html>
