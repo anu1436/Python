@@ -1,5 +1,8 @@
 # Birthday Wish Riddle Game
 
+## Demo
+click here to view the demo: https://web-production-7140b.up.railway.app/
+
 ## Overview
 This is a very simple Flask web application that presents the user with a series of riddles. The user must solve each riddle to proceed to the next one. At the end, a special birthday message is displayed.
 
