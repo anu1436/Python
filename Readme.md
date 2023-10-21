@@ -1,7 +1,7 @@
 # Birthday Wish Riddle Game
 
 ## Overview
-This is a simple Flask web application that presents the user with a series of riddles. The user must solve each riddle to proceed to the next one. At the end, a special birthday message is displayed.
+This is a very simple Flask web application that presents the user with a series of riddles. The user must solve each riddle to proceed to the next one. At the end, a special birthday message is displayed.
 
 ## Features
 - Multiple riddles with a smooth transition from one to the next
@@ -12,7 +12,7 @@ This is a simple Flask web application that presents the user with a series of r
 - Python
 - Flask
 - HTML, CSS, JavaScript
-- Firebase (for deployment)
+- Railway (I used for Deployment)
 
 ## Installation and Setup
 1. Clone the repository
@@ -29,7 +29,7 @@ Choose your preferred deployment option.
 Feel free to fork the project and submit a pull request with your changes!
 
 ## License
-Feel free to use this.
+MIT License.
 
 ## Contact
 For any queries, feel free to contact me at [anu14official@gmail.com](mailto:anu14official@gmail.com).

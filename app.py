@@ -11,7 +11,6 @@ riddles = {
     "Of": "I am a two-letter word that connects everything, what am I?",
     "The": "I am the most commonly used word in English, what am I?",
     "Day": "I am not night but the opposite, what am I?"
-    # Add more riddles
 }
 
 answers = {
@@ -22,7 +21,6 @@ answers = {
     "Of": "of",
     "The": "the",
     "Day": "day"
-    # Add more answers
 }
 
 @app.route('/')
